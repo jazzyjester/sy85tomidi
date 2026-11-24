@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sy85tomidi"
+version = "0.1.0"
+description = "Convert Yamaha SY85 sequencer disk files (songs and rhythm patterns) to Standard MIDI Files"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = ["mido>=1.2"]
+keywords = ["yamaha", "sy85", "tg500", "midi", "synthesizer", "sequencer", "converter", "retro"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: MIDI",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+sy85tomidi = "sy85tomidi.cli:main"
+
+[tool.setuptools]
+packages = ["sy85tomidi"]
